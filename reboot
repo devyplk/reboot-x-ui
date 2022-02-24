@@ -11,10 +11,7 @@ sudo apt update
 # Upgrade System
 sudo apt upgrade -y
 # Open X-UI
-x-ui
-#sleep 10s
-# select uninstall
-3
+x-ui uninstall
 #sleep 5s
 # Conform Uninstall
 y
