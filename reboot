@@ -1,0 +1,29 @@
+#!/bin/bash
+#====================================================
+# SCRIPT: ELH SERVER QUICK DEPLOY FOR X-UI
+# DEVELOPED BY: MONOXOFIGHTER
+# UPDATE DATE: 2022.02.25
+# THIS REPO SPECIALLY MADE FOR DARKSSH FREE SERVERS.
+#====================================================
+
+# Update System
+sudo apt update 
+# Upgrade System
+sudo apt upgrade -y
+# Open X-UI
+x-ui
+sleep 10
+# select uninstall
+3
+sleep 5
+# Conform Uninstall
+y
+sleep 10
+# Remove Files
+rm /usr/bin/x-ui -f
+sleep 5
+# Reinstall
+bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+sleep 20
+# Reboot
+sudo reboot
