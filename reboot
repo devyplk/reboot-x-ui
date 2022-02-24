@@ -11,14 +11,15 @@ sudo apt update
 # Upgrade System
 sudo apt upgrade -y
 # Open X-UI
-x-ui uninstall
-#sleep 5s
-# Conform Uninstall
-echo "y"
-#sleep 10s
-# Remove Files
+systemctl stop x-ui
+systemctl disable x-ui
+rm /etc/systemd/system/x-ui.service -f
+systemctl daemon-reload
+systemctl reset-failed
+rm /etc/x-ui/ -rf
+rm /usr/local/x-ui/ -rf
 rm /usr/bin/x-ui -f
-#sleep 5s
+sleep 5s
 # Reinstall
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 #sleep 20s
