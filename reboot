@@ -14,7 +14,7 @@ sudo apt upgrade -y
 x-ui uninstall
 #sleep 5s
 # Conform Uninstall
-y
+echo "y"
 #sleep 10s
 # Remove Files
 rm /usr/bin/x-ui -f
